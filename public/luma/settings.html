@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paramètres — LUMA</title>
+<meta name="description" content="Thème, compte et déconnexion de votre espace LUMA." />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/profile.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+<main class="page">
+  <header class="page-head">
+    <a class="btn btn-ghost" href="./messages.html">← Messages</a>
+    <h1>Paramètres</h1>
+  </header>
+  <section class="card">
+    <div class="row">
+      <div><strong>Thème</strong><span class="muted">Clair ou sombre</span></div>
+      <button class="btn btn-ghost" id="theme-toggle">Basculer</button>
+    </div>
+    <div class="row">
+      <div><strong>Compte</strong><span class="muted" id="email"></span></div>
+      <a class="btn btn-ghost" href="./profile.html">Modifier</a>
+    </div>
+    <div class="row">
+      <div><strong>Session</strong><span class="muted">Se déconnecter de cet appareil</span></div>
+      <button class="btn btn-primary" id="logout">Déconnexion</button>
+    </div>
+  </section>
+</main>
+<script type="module" src="./js/settings.js"></script>
+</body>
+</html>

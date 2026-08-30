@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Connexion — LUMA</title>
+<meta name="description" content="Connectez-vous à votre compte LUMA." />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/auth.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+<main class="auth-wrap">
+  <section class="auth-card">
+    <a class="brand" href="./index.html"><span class="dot"></span> LUMA</a>
+    <h1>Connexion</h1>
+    <form id="login-form" class="form">
+      <label>Email<input type="email" id="email" required autocomplete="email" /></label>
+      <label>Mot de passe<input type="password" id="password" required autocomplete="current-password" /></label>
+      <button class="btn btn-primary btn-lg" type="submit">Se connecter</button>
+    </form>
+    <button id="reset-btn" class="link">Mot de passe oublié ?</button>
+    <p class="alt">Pas de compte ? <a href="./register.html">Créer un compte</a></p>
+    <p id="msg" class="msg" role="status"></p>
+  </section>
+</main>
+<script type="module" src="./js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Messages — LUMA</title>
+<meta name="description" content="Vos conversations privées LUMA en temps réel." />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/messages.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body class="app-body">
+<div class="app" id="app" hidden>
+  <aside class="sidebar" id="sidebar">
+    <header class="side-head">
+      <a class="brand" href="./index.html"><span class="dot"></span> LUMA</a>
+      <a class="avatar-link" href="./profile.html" title="Profil"><img id="me-avatar" alt="Mon profil" /></a>
+    </header>
+    <div class="search">
+      <input id="search-input" type="search" placeholder="Rechercher un utilisateur…" autocomplete="off" />
+      <ul id="search-results" class="results"></ul>
+    </div>
+    <ul id="conv-list" class="conv-list"></ul>
+    <footer class="side-foot">
+      <a class="btn btn-ghost" href="./settings.html">Paramètres</a>
+      <button class="btn btn-ghost" id="logout">Déconnexion</button>
+    </footer>
+  </aside>
+
+  <section class="chat" id="chat">
+    <header class="chat-head">
+      <button class="btn btn-ghost back" id="back">←</button>
+      <img id="peer-avatar" alt="" />
+      <div><strong id="peer-name">Sélectionnez une conversation</strong><span id="peer-username" class="muted"></span></div>
+    </header>
+    <div class="messages" id="messages"></div>
+    <form class="composer" id="composer" hidden>
+      <input id="message-input" type="text" placeholder="Écrire un message…" autocomplete="off" required />
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
+  </section>
+</div>
+<script type="module" src="./js/messages.js"></script>
+</body>
+</html>

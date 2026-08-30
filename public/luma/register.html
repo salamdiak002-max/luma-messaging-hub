@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inscription — LUMA</title>
+<meta name="description" content="Créez votre compte LUMA en quelques secondes." />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/auth.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+<main class="auth-wrap">
+  <section class="auth-card">
+    <a class="brand" href="./index.html"><span class="dot"></span> LUMA</a>
+    <h1>Créer un compte</h1>
+    <form id="register-form" class="form">
+      <label>Nom<input type="text" id="displayName" required /></label>
+      <label>Nom d'utilisateur<input type="text" id="username" required pattern="[a-z0-9_\.]{3,20}" title="3 à 20 caractères : a-z, 0-9, _ ou ." /></label>
+      <label>Email<input type="email" id="email" required autocomplete="email" /></label>
+      <label>Mot de passe<input type="password" id="password" required minlength="6" autocomplete="new-password" /></label>
+      <button class="btn btn-primary btn-lg" type="submit">S'inscrire</button>
+    </form>
+    <p class="alt">Déjà inscrit ? <a href="./login.html">Se connecter</a></p>
+    <p id="msg" class="msg" role="status"></p>
+  </section>
+</main>
+<script type="module" src="./js/auth.js"></script>
+</body>
+</html>
