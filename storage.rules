@@ -1,0 +1,28 @@
+rules_version = '2';
+// Nom : storage.rules | Chemin : /storage.rules
+// Rôle : sécurité Firebase Storage — photos de profil et pièces jointes (préparé).
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function signedIn() { return request.auth != null; }
+    function validImage() {
+      return request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // Photos de profil : lecture par les utilisateurs connectés, écriture par le propriétaire.
+    match /users/{userId}/profile/{fileName} {
+      allow read: if signedIn();
+      allow write: if signedIn() && request.auth.uid == userId && validImage();
+    }
+
+    // Pièces jointes (v2) : réservées aux membres, contrôle affiné à ajouter avec la feature.
+    match /conversations/{conversationId}/attachments/{fileName} {
+      allow read, write: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
