@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Profil — LUMA</title>
+<meta name="description" content="Gérez votre profil LUMA : nom, nom d'utilisateur et photo." />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/profile.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+<main class="page">
+  <header class="page-head">
+    <a class="btn btn-ghost" href="./messages.html">← Messages</a>
+    <h1>Profil</h1>
+  </header>
+  <section class="card">
+    <div class="profile-top">
+      <img id="avatar" alt="Photo de profil" />
+      <div><strong id="email" class="muted"></strong></div>
+    </div>
+    <form id="profile-form" class="form">
+      <label>Nom<input type="text" id="displayName" required /></label>
+      <label>Nom d'utilisateur<input type="text" id="username" required pattern="[a-z0-9_\.]{3,20}" /></label>
+      <label>URL de la photo<input type="url" id="photoURL" placeholder="https://…" /></label>
+      <button class="btn btn-primary btn-lg" type="submit">Enregistrer</button>
+    </form>
+    <p id="msg" class="msg" role="status"></p>
+  </section>
+</main>
+<script type="module" src="./js/profile.js"></script>
+</body>
+</html>
