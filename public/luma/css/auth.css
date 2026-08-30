@@ -1,0 +1,7 @@
+.auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:5vh 5vw;
+  background:radial-gradient(900px 500px at 50% -10%,rgba(47,211,181,.16),transparent 70%)}
+.auth-card{width:100%;max-width:420px;background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:2rem;box-shadow:var(--shadow)}
+.auth-card h1{font-size:1.6rem;margin:1.2rem 0 1.4rem}
+.alt{color:var(--muted);font-size:.9rem;margin:1rem 0 0}
+.alt a{color:var(--accent);font-weight:600}

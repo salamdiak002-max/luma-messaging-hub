@@ -1,0 +1,8 @@
+.page{max-width:640px;margin:0 auto;padding:4vh 5vw}
+.page-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.page-head h1{font-size:1.4rem;margin:0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.5rem;box-shadow:var(--shadow)}
+.profile-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem}
+.profile-top img{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--surface-2);border:1px solid var(--border)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.row:last-child{border-bottom:0}

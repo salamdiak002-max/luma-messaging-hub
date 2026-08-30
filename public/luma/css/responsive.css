@@ -1,0 +1,15 @@
+@media (max-width:900px){
+  .features{grid-template-columns:1fr}
+  .app{grid-template-columns:1fr}
+  .sidebar{display:flex}
+  .chat{display:none}
+  .app.chat-open .sidebar{display:none}
+  .app.chat-open .chat{display:flex}
+  .chat-head .back{display:inline-flex}
+}
+@media (max-width:520px){
+  .nav{padding:1rem 1.2rem}
+  .hero{padding:4vh 1.2rem 6vh}
+  .auth-card{padding:1.5rem}
+  .bubble{max-width:85%}
+}

@@ -1,0 +1,34 @@
+.app-body{overflow:hidden}
+.app{display:grid;grid-template-columns:330px 1fr;height:100vh}
+.sidebar{display:flex;flex-direction:column;border-right:1px solid var(--border);background:var(--surface);min-height:0}
+.side-head{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.1rem;border-bottom:1px solid var(--border)}
+.avatar-link img,.conv img,.chat-head img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:var(--surface-2);border:1px solid var(--border)}
+.search{padding:.8rem 1rem;position:relative}
+.results{list-style:none;margin:.4rem 0 0;padding:0;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.results:empty{display:none}
+.results li{padding:.6rem .8rem;cursor:pointer;font-size:.9rem}
+.results li:hover{background:var(--surface)}
+.conv-list{list-style:none;margin:0;padding:.3rem .6rem 1rem;overflow-y:auto;flex:1;min-height:0}
+.conv{display:flex;gap:.7rem;align-items:center;padding:.65rem .7rem;border-radius:12px;cursor:pointer}
+.conv:hover{background:var(--surface-2)}
+.conv.active{background:var(--surface-2);box-shadow:inset 2px 0 0 var(--accent)}
+.conv-body{flex:1;min-width:0}
+.conv-body b{display:block;font-size:.94rem}
+.conv-body span{display:block;color:var(--muted);font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conv-meta{text-align:right;font-size:.72rem;color:var(--muted)}
+.badge{display:inline-block;margin-top:.25rem;min-width:20px;padding:.05rem .4rem;border-radius:999px;
+  background:var(--accent);color:#04151a;font-weight:700;font-size:.72rem}
+.side-foot{display:flex;gap:.5rem;padding:.8rem 1rem;border-top:1px solid var(--border)}
+.side-foot .btn{flex:1;font-size:.85rem}
+
+.chat{display:flex;flex-direction:column;min-height:0;background:var(--bg)}
+.chat-head{display:flex;align-items:center;gap:.8rem;padding:.9rem 1.2rem;border-bottom:1px solid var(--border);background:var(--surface)}
+.chat-head .back{display:none}
+.messages{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:.5rem}
+.bubble{max-width:min(68%,520px);padding:.6rem .85rem;border-radius:16px;background:var(--surface);border:1px solid var(--border);word-wrap:break-word}
+.bubble.me{align-self:flex-end;background:linear-gradient(100deg,var(--accent),var(--accent-2));color:#04151a;border-color:transparent}
+.bubble time{display:block;font-size:.68rem;opacity:.7;margin-top:.25rem;text-align:right}
+.day{align-self:center;color:var(--muted);font-size:.75rem;margin:.6rem 0}
+.composer{display:flex;gap:.6rem;padding:.9rem 1.2rem;border-top:1px solid var(--border);background:var(--surface)}
+.composer input{flex:1}
+.empty{margin:auto;color:var(--muted)}
